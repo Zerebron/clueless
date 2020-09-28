@@ -4,8 +4,7 @@ import logic.enums.Player;
 import logic.enums.Rooms;
 import logic.enums.Weapons;
 
-import java.util.Random;
-import java.util.Vector;
+import java.util.*;
 
 public class GameLogic {
     Vector<String> data = new Vector<>();
@@ -32,6 +31,7 @@ public class GameLogic {
         for(Weapons wp: Weapons.values()){
             data.add(wp.name());
         }
+        Collections.shuffle(data);
     }
 
     public void getRndCardsForPlayer( int num){
